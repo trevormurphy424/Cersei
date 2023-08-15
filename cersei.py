@@ -52,7 +52,6 @@ def setup():
 
 	# Begins game
 	log.write("\n\n\nRound #" + str(repeats + 1) + "\n")
-	draw(1,True,True)
 
 def draw(number, playerOne, playerTwo):
 	# Declare global variables
