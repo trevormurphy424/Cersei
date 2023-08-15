@@ -5,6 +5,7 @@
 
 ### What is Cersei?  
 Cersei is a modification of the classic game "War" in which players play cards and higher-valued cards win.  
+
   
 ### What's different?  
 #### Card Names  
@@ -24,12 +25,13 @@ Cersei is a modification of the classic game "War" in which players play cards a
 * Joker -> Eunich
   
 #### New Card Values
-* Cannoneer -> -14/0/14 (See Rules)
+* Cannoneer -> -14/0/14 (See [Rules](#rules))
 * 2-10 -> Respective Values
 * Assassain -> 11
-* Circe -> 2/Infinite (See Rules)
-* King -> 10/Infinite (See Rules)
+* Circe -> 2/Infinite (See [Rules](#rules))
+* King -> 10/Infinite (See [Rules](#rules))
 * Eunich -> 15
+
   
 ### Rules
 The game plays exactly like war, with a few exceptions:
@@ -43,7 +45,7 @@ The game plays exactly like war, with a few exceptions:
 
 #### In-Round Cards:
 * Cannoneer (Ace): If the color of the Cannoneer matches that of the highest opponent, it is worth +14.  Otherwise, it is worth -14.
-* Scout (2): If a scout is played, a battle takes place.  (See Battles section below.)
+* Scout (2): If a scout is played, a battle takes place.  (See [Battles](#wars--battles) section below.)
 * Diplomat (9): If played during a battle or war, all cards are returned to original respective players.  Overridden by both King and Cersei
 * Cersei (Queen): Defeats all cards aside from pawns.  Otherwise, worth 2.
 * King (King): The king wins all battles and wars __except those against Cersei__.
@@ -59,8 +61,10 @@ Wars and battles consist of a player placing down either 3 or 1 face down cards 
 * For battles, 1 card is played face-down before one is played face-up on top.
 * Modifier cards *can* be applied to cards played in wars.
 
+
 ### So what about winning?
 The player with the most cards in their deck at the end of the game wins.  The end of the game happens either when Cersei is played 3 times, or when a player runs out of cards.
+
 
 ### Help! I'm stubborn and have a conflict with another player!
 In case of a conflict, simply add up values of all cards and give the player with the higher value of cards the win for the round.  
