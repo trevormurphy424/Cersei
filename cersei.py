@@ -50,9 +50,6 @@ def setup():
 	# Logs both beginning decks
 	log.write("Beginning Decks:		\n\nPlayer 1: " + str(deckOne) + "\n---\nPlayer 2: " + str(deckTwo))
 
-	# Begins game
-	log.write("\n\n\nRound #" + str(repeats + 1) + "\n")
-
 def draw(number, playerOne, playerTwo):
 	# Declare global variables
 	global deckOne, deckTwo, handOne, handTwo, deck, diamond_12_count
@@ -133,13 +130,13 @@ def cardValues():
 		handTwo[-1] = (old_card_value, suit, new_card_value)  # Replace the tuple with the new one
 		log.write("Player 2 Adjusted Hand: " + str(handTwo) + "\n")
 
-	
+	debug.write(str(new_card_value))
 	checkWars()
 
 def cannon_value(opponentSuit, aceSuit):
 	opponentValid = int(suit_equivalence.get(opponentSuit, opponentSuit))
 	aceValid = int(suit_equivalence.get(aceSuit, aceSuit))
-	#print(opponentValid, aceValid)
+	log.write(str(opponentValid) + (aceValid))
 	if opponentValid != aceValid:
 		return -14
 	else:
@@ -194,7 +191,6 @@ def checkBattles():
 	if handOne[-1][0] == 2 or handTwo[-1][0] == 2:
 		log.write("Battle found! Drawing.\n")
 		draw2(2,True,True)
-		cardValues()
 	else:
 		log.write("No battles found.\n")
 		cardValues()
@@ -208,7 +204,6 @@ def checkWars():
 	if handOne[-1][2] == handTwo[-1][2]:
 		log.write("War found! Drawing.\n")
 		draw2(3,True,True)
-		cardValues()
 	else:
 		log.write("No wars found.\n")
 		calculateWinner()
