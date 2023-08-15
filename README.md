@@ -62,7 +62,7 @@ The player with the most cards in their deck at the end of the game wins.  The e
 
 ### Help! I'm stubborn and have a conflict with another player!
 In case of a conflict, simply add up values of all cards and give the player with the higher value of cards the win for the round.  
-**Still can't decide?**
+**Still can't decide?**  
 Take this handy chart for the order in which turns should be played.  This eliminates any conflicts if played correctly.
 1. Place initial cards.
 2. Add all modifier cards.
