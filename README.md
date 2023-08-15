@@ -61,7 +61,7 @@ Wars and battles consist of a player placing down either 3 or 1 face down cards 
 The player with the most cards in their deck at the end of the game wins.  The end of the game happens either when Cersei is played 3 times, or when a player runs out of cards.
 
 ### Help! I'm stubborn and have a conflict with another player!
-In case of a conflict, simply add up values of all cards and give the player with the higher value of cards the win for the round.
+In case of a conflict, simply add up values of all cards and give the player with the higher value of cards the win for the round.  
 **Still can't decide?**
 Take this handy chart for the order in which turns should be played.  This eliminates any conflicts if played correctly.
 1. Place initial cards.
