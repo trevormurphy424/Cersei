@@ -57,17 +57,16 @@ def draw(number, playerOne, playerTwo):
 
 	# Draw "number" amount of cards into player hand
 	for _ in range(number):
-		if playerOne == True and deckOne:
+		if playerOne == True:
 			drawnCard = deckOne.pop(0)
 			handOne.append(drawnCard)
 			log.write("Card drawn (Player One): " + str(drawnCard) + "\n")
-		if playerTwo == True and deckTwo:
+		if playerTwo == True:
 			drawnCard = deckTwo.pop(0)
 			handTwo.append(drawnCard)
 			log.write("Card drawn (Player Two): " + str(drawnCard) + "\n")
 	else:
 		None
-
 	calculateModifiers()
 
 def draw2(number, playerOne, playerTwo):
@@ -86,9 +85,9 @@ def draw2(number, playerOne, playerTwo):
 				drawnCard = deckTwo.pop(0)
 				handTwo.append(drawnCard)
 				log.write("Card drawn (Player Two): " + str(drawnCard) + "\n")
+		calculateModifiers()
 	else:
 		calculateWinner()
-	calculateModifiers()
 
 def cardValues():
 	# Declare global variables
@@ -148,15 +147,15 @@ def calculateModifiers():
 	log.write("\n---------- Calculate Modifiers ----------\n")
 
 	# Check for 5 cards in hand.
-	if handOne[-1][0] == 5:
+	if handOne and handOne[-1][0] == 5:
 		log.write("Modifiers applied to player 1! Drawing.\n")
 		draw2(1,True,False)
 		newCard = (handOne[-1][0], handOne[-1][1], handOne[-1][0] + handOne[-2][0])
 		handOne.append(newCard)
-		handOne.pop(-1)
+		handOne.pop(-2)
 		#print("5 Drawn")
 		log.write("New player 1 card value with modifications: " + str(newCard[0]) + "\n")
-	elif handOne[-1][0] == 8:
+	elif handOne and handOne[-1][0] == 8:
 		log.write("Modifiers applied to player 1! Drawing.\n")
 		draw2(1,True,False)
 		newCard = (handTwo[-1][0], handTwo[-1][1], handTwo[-1][0] - handOne[-1][0])
@@ -164,15 +163,15 @@ def calculateModifiers():
 		handOne.pop(-1)
 		#print("8 Drawn")
 		log.write("New player 2 card value with modifications: " + str(newCard[0]) + "\n")
-	if handTwo[-1][0] == 5:
+	if handTwo and handTwo[-1][0] == 5:
 		log.write("Modifiers applied to player 2! Drawing.\n")
 		draw2(1,False,True)
 		newCard = (handTwo[-1][0], handTwo[-1][1], handTwo[-1][0] + handTwo[-2][0])
 		handTwo.append(newCard)
-		handTwo.pop(-1)
+		handTwo.pop(-2)
 		#print("5 Drawn")
 		log.write("New player 2 card value with modifications: " + str(newCard[0]) + "\n")
-	elif handTwo[-1][0] == 8:
+	elif handTwo and handTwo[-1][0] == 8:
 		log.write("Modifiers applied to player 2! Drawing.\n")
 		draw2(1,False,True)
 		newCard = (handOne[-1][0], handOne[-1][1], handOne[-1][0] - handTwo[-1][0])
@@ -187,7 +186,7 @@ def checkBattles():
 	# Declare global variables
 	global deckOne, deckTwo, handOne, handTwo
 	log.write("\n---------- Check for Battles ----------\n")
-
+	debug.write("\n" + str(handOne) + "\n" + str(handTwo))
 	if handOne[-1][0] == 2 or handTwo[-1][0] == 2:
 		log.write("Battle found! Drawing.\n")
 		draw2(2,True,True)
