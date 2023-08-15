@@ -1,7 +1,7 @@
 # Cersei  
 ## A completely luck based game that's somehow entertaining!  
 
-***Note: This game is experimental, and the python version of the game is to find game flaws.  Please report all issues with either  `bug` or `gameplay` flags in issues when you find them so that we can improve the game. Thanks! `-trevormurphy424`***
+***Note: This game is experimental, and the python version of the game is to find game flaws.  Please report all issues with `bug`, `gameplay`, or `missing feature` flags in issues when you find them so that we can improve the game. Thanks! `-trevormurphy424`***
 
 ### What is Cersei?  
 Cersei is a modification of the classic game "War" in which players play cards and higher-valued cards win.  
